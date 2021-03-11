@@ -4,5 +4,5 @@ MAINTAINER Rajnish_Shonkhia
 
 WORKDIR /usr/local
 
-ADD Calculator1/target/calculator1-1.0-SNAPSHOT.jar .
+ADD /var/lib/jenkins/workspace/Calculatorpipeline/Spe-miniproject/Calculator1/target/calculator1-1.0-SNAPSHOT.jar .
 
