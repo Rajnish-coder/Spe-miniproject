@@ -1,4 +1,3 @@
-
 import org.junit.*;
 
 import static org.junit.Assert.*;
@@ -19,7 +18,8 @@ public class CalculatorTest {
         double num = 25;
         double expected = 5;
         double result = calctest.Squareroot(num);
-        Assert.assertEquals(expected,result,0.000000);
+        Assert.assertEquals(expected,result,0.000000);            // true positive
+        Assert.assertNotEquals(expected+1,result,0.000000);       // false positive
     }
 
     @Test
@@ -29,6 +29,7 @@ public class CalculatorTest {
         double expected = 24;
         double result = calctest.Factorial(num);
         Assert.assertEquals(expected,result,0.000000);
+        Assert.assertNotEquals(expected+1,result,0.000000);
     }
 
     @Test
@@ -38,6 +39,7 @@ public class CalculatorTest {
         double expected = Math.log(32);
         double result  =calctest.Logarithm(num);
         Assert.assertEquals(expected,result,0.000000);
+        Assert.assertNotEquals(expected+1,result,0.000000);
     }
 
     @Test
@@ -48,10 +50,11 @@ public class CalculatorTest {
         double expected = 64;
         double result = calctest.Power(a,b);
         Assert.assertEquals(expected,result,0.000000);
+        Assert.assertNotEquals(expected+1,result,0.000000);
     }
 
     @AfterClass
     public static void finish() {
-       System.out.println("Finished testing");
+        System.out.println("Finished testing");
     }
 }
