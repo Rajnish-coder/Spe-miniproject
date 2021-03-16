@@ -1,4 +1,6 @@
-FROM java:8
+FROM ubuntu:latest
+
+RUN apt-get update && apt install openjdk-8-jdk -y
 
 MAINTAINER Rajnish_Shonkhia
 
